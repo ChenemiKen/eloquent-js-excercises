@@ -1,14 +1,18 @@
-for(i=0; i<=7; i++){
-    my_string = ''
-    form = ''
-    mid = Math.ceil(7/2)
-    for(j=0; j<7; j++){
-        if(j=mid){
-            my_string += '#'
-        }else{
-            my_string += ' '
-        }
+christmassTree(30)
+
+function christmassTree(n){
+    let m = n-1
+    let branch = 1
+    while(n>0){
+        space = ' '.repeat(n)
+        branches = '#'.repeat(branch)
+        line = space+branches
+        console.log(line)
+        n--
+        branch+=2
     }
-    console.log(my_string)
+    for(i=0; i<=2; i++){
+       console.log(' '.repeat(m)+"''")
+    }
+    console.log(" ".repeat(m-2)+"======")
 }
-console.log('end')
